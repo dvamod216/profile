@@ -61,7 +61,7 @@
       flag: "🇻🇳",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.top",
+        domainTitle: "dvamod.net",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -150,7 +150,7 @@
       flag: "🇺🇸",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.top",
+        domainTitle: "dvamod.net",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -235,7 +235,7 @@
       flag: "🇰🇷",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.top",
+        domainTitle: "dvamod.net",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -322,7 +322,7 @@
       flag: "🇯🇵",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.top",
+        domainTitle: "dvamod.net",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -415,8 +415,8 @@
     channels: [
       { id: "tg-dm", titleKey: "tgPersonalTitle", sub: "t.me/dvamod2k15", btnKey: "tgPersonalBtn", url: "https://t.me/dvamod2k15", featured: true },
       { id: "tg-ch", titleKey: "tgChannelTitle", sub: "t.me/sentrylzdef", btnKey: "tgChannelBtn", url: "https://t.me/sentrylzdef", featured: false },
-      { id: "zalo", titleKey: "zaloTitle", subKey: "zaloSub", btnKey: "zaloBtn", url: "https://zalo.me", featured: false },
-      { id: "fb", titleKey: "fbTitle", subKey: "fbSub", btnKey: "fbBtn", url: "https://facebook.com", featured: false }
+      { id: "zalo", titleKey: "zaloTitle", subKey: "zaloSub", btnKey: "zaloBtn", url: "https://zalo.me/0378280430", featured: false },
+      { id: "fb", titleKey: "fbTitle", subKey: "fbSub", btnKey: "fbBtn", url: "https://facebook.com/vanan.nll", featured: false }
     ]
   };
 })(window);
