@@ -1,0 +1,586 @@
+/* ==========================================================================
+   #027 Expanding top-bar search · MIT License (c) 2026 Seokwoooo
+   ========================================================================== */
+.u027 {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 62px;
+  height: 62px;
+  transform: translateY(-50%);
+  z-index: 60;
+  transition: width 0.6s var(--ux-spring);
+}
+
+.u027.is-open {
+  width: min(420px, calc(100vw - 32px));
+}
+
+.u027-bar {
+  position: relative;
+  width: 100%;
+  height: 62px;
+  border-radius: 20px;
+  background: var(--ux-glass);
+  box-shadow: 0 0 0 1px var(--ux-line), 0 18px 36px -26px var(--ux-shadow-strong);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+}
+
+.u027-field {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--ux-surface-2);
+  box-shadow: inset 0 0 0 1px var(--ux-line);
+  overflow: hidden;
+  transition: width 0.6s var(--ux-spring), background-color 0.3s, box-shadow 0.3s;
+}
+
+.u027.is-open .u027-field {
+  width: calc(100% - 18px);
+  background: var(--ux-surface);
+  box-shadow: inset 0 0 0 2px var(--ux-accent);
+}
+
+.u027-go {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  padding: 0;
+  border-radius: 14px;
+  background: none;
+  color: var(--ux-ink);
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.u027-go svg,
+.u027-x svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.u027-in {
+  position: absolute;
+  left: 44px;
+  right: 44px;
+  top: 0;
+  height: 44px;
+  border: 0;
+  outline: 0;
+  background: none;
+  padding: 0 4px;
+  font-size: 15.5px;
+  color: var(--ux-ink);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ux-ease) 0.15s;
+}
+
+.u027-in::placeholder {
+  color: var(--ux-ink-3);
+}
+
+.u027.is-open .u027-in {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.u027-x {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  padding: 0;
+  border-radius: 10px;
+  background: var(--ux-surface-2);
+  color: var(--ux-ink-2);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(0.6) rotate(-90deg);
+  transition: opacity 0.25s, transform 0.5s var(--ux-spring);
+}
+
+.u027.is-open .u027-x {
+  opacity: 1;
+  transform: none;
+}
+
+.u027-pop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 72px;
+  padding: 14px 10px 10px;
+  border-radius: 20px;
+  background: var(--ux-surface);
+  box-shadow: 0 0 0 1px var(--ux-line), 0 30px 60px -30px var(--ux-shadow-strong);
+  transform-origin: 90% 0;
+  opacity: 0;
+  transform: translateY(-10px) scale(0.96);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.25s var(--ux-ease), transform 0.45s var(--ux-spring), visibility 0s 0.45s;
+}
+
+.u027.is-open .u027-pop {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  visibility: visible;
+  transition: opacity 0.3s var(--ux-ease) 0.1s, transform 0.55s var(--ux-spring) 0.1s;
+}
+
+.u027-sec {
+  margin: 0 8px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ux-ink-3);
+}
+
+.u027-recent {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 0 6px 12px;
+}
+
+.u027-recent button {
+  height: 32px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ux-surface-2);
+  font-size: 13px;
+  font-weight: 620;
+  color: var(--ux-ink-2);
+}
+
+.u027-recent button:hover {
+  background: var(--ux-surface-3);
+  color: var(--ux-ink);
+}
+
+.u027-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 150px;
+  overflow: hidden;
+}
+
+.u027-opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: background-color 0.2s var(--ux-ease), opacity 0.3s var(--ux-ease), transform 0.45s var(--ux-spring);
+}
+
+.u027.is-open .u027-opt {
+  opacity: 1;
+  transform: none;
+}
+
+.u027-opt[aria-selected="true"] {
+  background: var(--ux-surface-2);
+}
+
+.u027-opt i {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 10px;
+  background: var(--c);
+}
+
+.u027-opt b {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 650;
+}
+
+.u027-opt b mark {
+  background: none;
+  color: var(--ux-accent);
+  font-weight: 800;
+}
+
+.u027-opt small {
+  display: block;
+  font-size: 12px;
+  color: var(--ux-ink-3);
+}
+
+.u027-empty {
+  padding: 30px 8px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ux-ink-3);
+}
+
+.u027-hints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 8px 2px;
+  padding-top: 8px;
+  border-top: 1px solid var(--ux-line);
+  color: var(--ux-ink-3);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+}
+
+.u027-hints span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.u027-hints kbd {
+  border: 1px solid var(--ux-line);
+  border-radius: 4px;
+  background: var(--ux-surface-2);
+  padding: 2px 4px;
+}
+
+.u027-in:focus-visible {
+  outline: none;
+}
+
+/* The page has its own brand + nav; they step aside while the field grows. */
+.pro-header-actions:has(> .u027) {
+  position: relative;
+  padding-right: 70px;
+}
+
+.pro-header:has(.u027) .pro-brand,
+.pro-header:has(.u027) .pro-nav,
+.pro-header-actions:has(> .u027) > :not(.u027) {
+  transition: opacity 0.3s var(--ux-ease), transform 0.5s var(--ux-ease);
+}
+
+.pro-header:has(.u027.is-open) .pro-brand,
+.pro-header:has(.u027.is-open) .pro-nav,
+.pro-header-actions:has(> .u027.is-open) > :not(.u027) {
+  opacity: 0;
+  transform: translateX(-18px);
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .pro-header-actions:has(> .u027) { width: 100%; padding-right: 0; }
+  .u027 { position: relative; top: auto; right: auto; transform: none; }
+  .u027.is-open { width: 100%; }
+  .pro-header-actions:has(> .u027.is-open) > :not(.u027) { display: none; }
+}
+
+/* ==========================================================================
+   #079 Skeleton bloom card (used inside section cards & feed cards)
+   ========================================================================== */
+.u079-card {
+  position: relative;
+}
+
+.u079-re {
+  height: 28px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--ux-surface-2);
+  box-shadow: inset 0 0 0 1px var(--ux-line);
+  color: var(--ux-ink-2);
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.25s var(--ux-spring), background-color 0.2s;
+}
+
+.u079-re:hover {
+  color: var(--ux-ink);
+  background: var(--ux-surface-3);
+}
+
+.u079-re:active {
+  transform: scale(0.92);
+}
+
+.u079-re svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.u079-card.is-loading .u079-re svg {
+  animation: u079-spin 0.9s linear infinite;
+}
+
+@keyframes u079-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.u079-s {
+  position: relative;
+}
+
+.u079-sk {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  animation: u079-shine 1.6s linear infinite;
+  transition: opacity 0.45s var(--ux-ease);
+  background: linear-gradient(
+      100deg,
+      transparent 28%,
+      color-mix(in srgb, var(--ux-surface-3), var(--ux-ink) 7%) 45%,
+      transparent 62%
+    )
+    var(--sx, 0) 0 / var(--sw, 700px) 100% no-repeat,
+    var(--ux-surface-2);
+}
+
+@keyframes u079-shine {
+  from {
+    background-position: calc(var(--sx, 0px) - 700px) 0, 0 0;
+  }
+  to {
+    background-position: calc(var(--sx, 0px) + 700px) 0, 0 0;
+  }
+}
+
+.u079-r {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s var(--ux-ease), transform 0.6s var(--ux-spring);
+}
+
+.u079-card.is-done .u079-sk {
+  opacity: 0;
+  pointer-events: none;
+  transition-delay: var(--d, 0s);
+}
+
+.u079-card.is-done .u079-r {
+  opacity: 1;
+  transform: none;
+  transition-delay: var(--d, 0s);
+}
+
+.u079-blur-target .u079-r {
+  filter: blur(12px);
+  transform: scale(1.04);
+}
+
+.u079-card.is-done .u079-blur-target .u079-r {
+  filter: none;
+  transform: none;
+  transition:
+    opacity 0.5s var(--ux-ease) var(--d, 0s),
+    filter 0.85s var(--ux-ease) calc(var(--d, 0s) + 0.08s),
+    transform 0.85s var(--ux-ease) calc(var(--d, 0s) + 0.08s);
+}
+
+/* ==========================================================================
+   #267 Language switch with text swap & smooth button width
+   ========================================================================== */
+.u267-wrap {
+  position: relative;
+}
+
+.u267-gb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--ux-surface-2);
+  box-shadow: inset 0 0 0 1px var(--ux-line);
+  color: var(--ux-ink);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.u267-gb:hover {
+  background: var(--ux-surface-3);
+}
+
+.u267-gb svg {
+  width: 14px;
+  height: 14px;
+}
+
+.u267-dd {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  width: 164px;
+  padding: 5px;
+  border-radius: 12px;
+  background: var(--ux-surface);
+  box-shadow: 0 0 0 1px var(--ux-line-2), 0 16px 34px -12px var(--ux-shadow-strong);
+  transform-origin: 90% 0;
+  transform: scale(0.92) translateY(-4px);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 60;
+  transition: transform 0.25s cubic-bezier(0.3, 1.5, 0.5, 1), opacity 0.15s, visibility 0s 0.25s;
+}
+
+.u267-wrap.is-open .u267-dd {
+  transform: none;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transition: transform 0.25s cubic-bezier(0.3, 1.5, 0.5, 1), opacity 0.15s, visibility 0s;
+}
+
+.u267-op {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 34px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--ux-ink);
+  font-size: 12.5px;
+  font-weight: 650;
+  text-align: left;
+}
+
+.u267-op:hover {
+  background: var(--ux-surface-2);
+}
+
+.u267-op em {
+  font-style: normal;
+  font-size: 14px;
+}
+
+.u267-op svg {
+  margin-left: auto;
+  width: 13px;
+  height: 13px;
+  color: var(--ux-mint);
+  opacity: 0;
+}
+
+.u267-op.is-on svg {
+  opacity: 1;
+}
+
+.u267-sw {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.u267-sw > span {
+  display: block;
+}
+
+.u267-sw.is-go > span {
+  animation: u267-out 0.24s ease-in forwards;
+}
+
+.u267-sw.is-in > span {
+  animation: u267-in 0.36s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+@keyframes u267-out {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes u267-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.u267-pill-auto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--ux-ink);
+  color: var(--ux-page);
+  font-size: 12px;
+  font-weight: 700;
+  transition: width 0.35s cubic-bezier(0.3, 1.3, 0.5, 1), background-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .u267-sw > span {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   #219 Circular dark/light wipe overlay from button center
+   ========================================================================== */
+.u219-reveal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  background: var(--ux-page);
+  clip-path: circle(0px at var(--cx, 90vw) var(--cy, 36px));
+  opacity: 0;
+}
+
+.u219-reveal.is-animating {
+  opacity: 1;
+  clip-path: circle(165vmax at var(--cx, 90vw) var(--cy, 36px));
+  transition: clip-path 0.7s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.25s ease 0.55s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .u219-reveal.is-animating {
+    transition: none;
+    clip-path: none;
+    opacity: 0;
+  }
+}
