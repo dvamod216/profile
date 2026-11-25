@@ -428,7 +428,7 @@
   var dockNext = document.getElementById("dock-next");
   var dockMenu = document.getElementById("dock-menu");
   var dockCopy = document.getElementById("dock-copy");
-  var tabOrder = ["overview", "profile", "bots", "activity", "terminal", "map", "security"];
+  var tabOrder = ["overview", "profile", "bots", "activity", "terminal", "map", "security", "scam"];
   var tabIdx = 0;
 
   if (dockPrev) {
@@ -471,6 +471,7 @@
   window.LumenI18n.init();
   window.LumenTheme219.init();
   if (window.DvaSecOps) window.DvaSecOps.init();
+  if (window.DvaScamRadar) window.DvaScamRadar.init();
 
   function refreshDynamic(cur) {
     renderChannels(cur);
