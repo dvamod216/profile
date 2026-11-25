@@ -75,6 +75,7 @@
         tabSecurity: "Security",
         tabMap: "Bản đồ",
         tabSecurity: "Bảo mật",
+        tabScam: "Soi lừa đảo",
         searchPlaceholder: "Search",
         openSearch: "Mở tìm kiếm",
         closeSearch: "Đóng tìm kiếm",
@@ -128,11 +129,12 @@
         volLabel: "Vol",
         reloadCardBtn: "Reload"
       },
-      recent: ["Home", "Bản đồ", "Security Hub"],
+      recent: ["Home", "Bản đồ", "Security Hub", "Soi lừa đảo"],
       searchItems: [
         { title: "Home", kind: "Page", grad: "linear-gradient(135deg,#5F7A56,#7C8C6B)", target: "overview" },
         { title: "Bản đồ", kind: "Bản đồ · 177 quốc gia", grad: "linear-gradient(135deg,#5F7A56,#2F6F8F)", target: "map" },
         { title: "Security Hub", kind: "Bảo mật · IOC · Dò lỗ hổng web", grad: "linear-gradient(135deg,#A8764F,#7C3AED)", target: "security" },
+        { title: "Soi lừa đảo", kind: "AI Radar · soi URL nghi ngờ", grad: "linear-gradient(135deg,#D93A55,#D6731E)", target: "scam" },
         { title: "Profile", kind: "Hồ sơ · liên hệ", grad: "linear-gradient(135deg,#3B82F6,#8B5CF6)", target: "profile" },
         { title: "Bots", kind: "Telegram bots", grad: "linear-gradient(135deg,#6366F1,#38BDF8)", target: "bots" },
         { title: "Activity", kind: "Hoạt động", grad: "linear-gradient(135deg,#10B981,#3B82F6)", target: "activity" },
@@ -160,6 +162,9 @@
         tabBots: "Bots",
         tabActivity: "Activity",
         tabTerminal: "Terminal",
+        tabMap: "Map",
+        tabSecurity: "Security",
+        tabScam: "Scam Check",
         searchPlaceholder: "Search",
         openSearch: "Open search",
         closeSearch: "Close search",
@@ -213,11 +218,12 @@
         volLabel: "Vol",
         reloadCardBtn: "Reload"
       },
-      recent: ["Home", "Map", "Security Hub"],
+      recent: ["Home", "Map", "Security Hub", "Scam Check"],
       searchItems: [
         { title: "Home", kind: "Page", grad: "linear-gradient(135deg,#5F7A56,#7C8C6B)", target: "overview" },
         { title: "Map", kind: "Map · 177 countries", grad: "linear-gradient(135deg,#5F7A56,#2F6F8F)", target: "map" },
         { title: "Security Hub", kind: "Security · IOC · Web vuln scan", grad: "linear-gradient(135deg,#A8764F,#7C3AED)", target: "security" },
+        { title: "Scam Check", kind: "AI Radar · suspicious URL scanner", grad: "linear-gradient(135deg,#D93A55,#D6731E)", target: "scam" },
         { title: "Profile", kind: "Profile · contact", grad: "linear-gradient(135deg,#3B82F6,#8B5CF6)", target: "profile" },
         { title: "Bots", kind: "Telegram bots", grad: "linear-gradient(135deg,#6366F1,#38BDF8)", target: "bots" },
         { title: "Activity", kind: "Activity", grad: "linear-gradient(135deg,#10B981,#3B82F6)", target: "activity" },
@@ -247,6 +253,7 @@
         tabTerminal: "터미널",
         tabMap: "지도",
         tabSecurity: "보안",
+        tabScam: "사기 확인",
         searchPlaceholder: "Search",
         openSearch: "검색 열기",
         closeSearch: "검색 닫기",
@@ -300,11 +307,12 @@
         volLabel: "Vol",
         reloadCardBtn: "Reload"
       },
-      recent: ["Home", "지도", "Security Hub"],
+      recent: ["Home", "지도", "Security Hub", "사기 확인"],
       searchItems: [
         { title: "Home", kind: "Page", grad: "linear-gradient(135deg,#5F7A56,#7C8C6B)", target: "overview" },
         { title: "지도", kind: "지도 · 177개국", grad: "linear-gradient(135deg,#5F7A56,#2F6F8F)", target: "map" },
         { title: "Security Hub", kind: "보안 · IOC · 웹 취약점", grad: "linear-gradient(135deg,#A8764F,#7C3AED)", target: "security" },
+        { title: "사기 확인", kind: "AI 레이더 · 의심 URL 분석", grad: "linear-gradient(135deg,#D93A55,#D6731E)", target: "scam" },
         { title: "프로필", kind: "프로필 · 연락처", grad: "linear-gradient(135deg,#3B82F6,#8B5CF6)", target: "profile" },
         { title: "봇 목록", kind: "텔레그램 봇", grad: "linear-gradient(135deg,#6366F1,#38BDF8)", target: "bots" },
         { title: "활동", kind: "활동 내역", grad: "linear-gradient(135deg,#10B981,#3B82F6)", target: "activity" },
@@ -322,7 +330,7 @@
       flag: "🇯🇵",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.net",
+        domainTitle: "dvamod.top",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -334,6 +342,7 @@
         tabTerminal: "ターミナル",
         tabMap: "地図",
         tabSecurity: "セキュリティ",
+        tabScam: "詐欺チェック",
         searchPlaceholder: "Search",
         openSearch: "検索を開く",
         closeSearch: "検索を閉じる",
@@ -387,11 +396,12 @@
         volLabel: "Vol",
         reloadCardBtn: "Reload"
       },
-      recent: ["Home", "地図", "Security Hub"],
+      recent: ["Home", "地図", "Security Hub", "詐欺チェック"],
       searchItems: [
         { title: "Home", kind: "Page", grad: "linear-gradient(135deg,#5F7A56,#7C8C6B)", target: "overview" },
         { title: "地図", kind: "地図 · 177か国", grad: "linear-gradient(135deg,#5F7A56,#2F6F8F)", target: "map" },
         { title: "Security Hub", kind: "セキュリティ · IOC · Web脆弱性", grad: "linear-gradient(135deg,#A8764F,#7C3AED)", target: "security" },
+        { title: "詐欺チェック", kind: "AIレーダー · 疑わしいURLを解析", grad: "linear-gradient(135deg,#D93A55,#D6731E)", target: "scam" },
         { title: "プロフィール", kind: "プロフィール · 連絡先", grad: "linear-gradient(135deg,#3B82F6,#8B5CF6)", target: "profile" },
         { title: "ボット", kind: "Telegram ボット", grad: "linear-gradient(135deg,#6366F1,#38BDF8)", target: "bots" },
         { title: "アクティビティ", kind: "アクティビティ", grad: "linear-gradient(135deg,#10B981,#3B82F6)", target: "activity" },
@@ -415,8 +425,8 @@
     channels: [
       { id: "tg-dm", titleKey: "tgPersonalTitle", sub: "t.me/dvamod2k15", btnKey: "tgPersonalBtn", url: "https://t.me/dvamod2k15", featured: true },
       { id: "tg-ch", titleKey: "tgChannelTitle", sub: "t.me/sentrylzdef", btnKey: "tgChannelBtn", url: "https://t.me/sentrylzdef", featured: false },
-      { id: "zalo", titleKey: "zaloTitle", subKey: "zaloSub", btnKey: "zaloBtn", url: "https://zalo.me/0378280430", featured: false },
-      { id: "fb", titleKey: "fbTitle", subKey: "fbSub", btnKey: "fbBtn", url: "https://facebook.com/vanan.nll", featured: false }
+      { id: "zalo", titleKey: "zaloTitle", sub: "0378280430 · zalo.me/0378280430", btnKey: "zaloBtn", url: "https://zalo.me/0378280430", featured: false },
+      { id: "fb", titleKey: "fbTitle", sub: "facebook.com/vanan.nll", btnKey: "fbBtn", url: "https://www.facebook.com/vanan.nll", featured: false }
     ]
   };
 })(window);
