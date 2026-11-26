@@ -61,7 +61,7 @@
       flag: "🇻🇳",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.top",
+        domainTitle: "dvamod.net",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -94,6 +94,12 @@
         tgPersonalBtn: "Direct",
         tgChannelTitle: "Telegram Channel",
         tgChannelBtn: "Feed",
+        zaloTitle: "Zalo Cá Nhân",
+        zaloSub: "Mở trang cá nhân Zalo",
+        zaloBtn: "Zalo",
+        fbTitle: "Facebook Cá Nhân",
+        fbSub: "Mở trang cá nhân FB",
+        fbBtn: "FB",
         kickerBots: "04 / TELEGRAM BOTS",
         botsActive: "02 ACTIVE",
         bot1Desc: "Bot scan mini vulnerability hỗ trợ kiểm tra bảo mật trực tiếp trên Telegram.",
@@ -146,7 +152,7 @@
       flag: "🇺🇸",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.top",
+        domainTitle: "dvamod.net",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -177,6 +183,12 @@
         tgPersonalBtn: "Direct",
         tgChannelTitle: "Telegram Channel",
         tgChannelBtn: "Feed",
+        zaloTitle: "Personal Zalo",
+        zaloSub: "Open Zalo profile",
+        zaloBtn: "Zalo",
+        fbTitle: "Personal Facebook",
+        fbSub: "Open Facebook profile",
+        fbBtn: "FB",
         kickerBots: "04 / TELEGRAM BOTS",
         botsActive: "02 ACTIVE",
         bot1Desc: "Mini vulnerability scanner bot supporting live security checks on Telegram.",
@@ -229,7 +241,7 @@
       flag: "🇰🇷",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.top",
+        domainTitle: "dvamod.net",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -260,6 +272,12 @@
         tgPersonalBtn: "Direct",
         tgChannelTitle: "텔레그램 채널",
         tgChannelBtn: "Feed",
+        zaloTitle: "개인 Zalo",
+        zaloSub: "Zalo 프로필 열기",
+        zaloBtn: "Zalo",
+        fbTitle: "개인 Facebook",
+        fbSub: "Facebook 프로필 열기",
+        fbBtn: "FB",
         kickerBots: "04 / TELEGRAM BOTS",
         botsActive: "02 ACTIVE",
         bot1Desc: "텔레그램에서 직접 보안 점검을 지원하는 미니 취약점 스캐너 봇입니다.",
@@ -312,7 +330,7 @@
       flag: "🇯🇵",
       t: {
         statusPill: "DVA SYSTEMS · ONLINE · HCM / VN",
-        domainTitle: "dvamod.top",
+        domainTitle: "dvamod.net",
         soundOn: "Sound On",
         soundOff: "Sound Off",
         lightMode: "Light",
@@ -343,6 +361,12 @@
         tgPersonalBtn: "Direct",
         tgChannelTitle: "Telegramチャンネル",
         tgChannelBtn: "Feed",
+        zaloTitle: "個人Zalo",
+        zaloSub: "Zaloプロフィールを開く",
+        zaloBtn: "Zalo",
+        fbTitle: "個人Facebook",
+        fbSub: "Facebookプロフィールを開く",
+        fbBtn: "FB",
         kickerBots: "04 / TELEGRAM BOTS",
         botsActive: "02 ACTIVE",
         bot1Desc: "Telegram上で直接セキュリティ確認をサポートするミニ脆弱性スキャナーボット。",
@@ -400,7 +424,9 @@
     ],
     channels: [
       { id: "tg-dm", titleKey: "tgPersonalTitle", sub: "t.me/dvamod2k15", btnKey: "tgPersonalBtn", url: "https://t.me/dvamod2k15", featured: true },
-      { id: "tg-ch", titleKey: "tgChannelTitle", sub: "t.me/sentrylzdef", btnKey: "tgChannelBtn", url: "https://t.me/sentrylzdef", featured: false }
+      { id: "tg-ch", titleKey: "tgChannelTitle", sub: "t.me/sentrylzdef", btnKey: "tgChannelBtn", url: "https://t.me/sentrylzdef", featured: false },
+      { id: "zalo", titleKey: "zaloTitle", sub: "0378280430 · zalo.me/0378280430", btnKey: "zaloBtn", url: "https://zalo.me/0378280430", featured: false },
+      { id: "fb", titleKey: "fbTitle", sub: "facebook.com/vanan.nll", btnKey: "fbBtn", url: "https://www.facebook.com/vanan.nll", featured: false }
     ]
   };
 })(window);
